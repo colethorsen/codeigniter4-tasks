@@ -71,7 +71,8 @@ class RunResolver
                 if ($position === 'weekDay') {
                     $method = 'getDayOfWeek';
 
-                    $value = $this->convertDOWToNumbers($value);
+                    //cron uses 0 based day of week (0 is Sunday), but this functions with (1 as Sunday)
+                    $value = $this->convertDOWToNumbers($value + 1);
                 }
                 $nextValue = $next->{$method}();
 
