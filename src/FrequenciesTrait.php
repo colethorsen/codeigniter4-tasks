@@ -124,7 +124,6 @@ trait FrequenciesTrait
     /**
      * Runs on a specific choosen hours
      *
-     * @param array $hours
      * @return self
      */
     public function hours(array $hours = [])
@@ -199,10 +198,10 @@ trait FrequenciesTrait
     /**
      * Runs on a specific choosen minutes
      *
-     * @param array $minutes
+     * @param array|int $minutes
      * @return self
      */
-    public function minutes(array $minutes = [])
+    public function minutes($minutes = [])
     {
         if (!is_array($minutes)) {
             $minutes = [$minutes];
