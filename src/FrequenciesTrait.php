@@ -141,9 +141,10 @@ trait FrequenciesTrait
     /**
      * Runs on a specific choosen hours
      *
+     * @param array|int $hours
      * @return self
      */
-    public function hours(array $hours = [])
+    public function hours($hours = [])
     {
         if (!is_array($hours)) {
             $hours = [$hours];
