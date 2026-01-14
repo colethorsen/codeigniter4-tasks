@@ -60,7 +60,7 @@ class TaskRunner
             try {
                 $output = $task->run();
             } catch (\Throwable $e) {
-                log_message('error', $e->getMessage(), $e->getTrace());
+                log_exception($e);
                 $error = $e;
             } finally {
                 // Save performance info
